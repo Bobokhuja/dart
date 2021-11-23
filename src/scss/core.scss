@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.container {
+  @include min-max(320px, 100%, 0);
+}
+
+.wrap {
+  @include min-max(320px, 1200px, 15px);
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
