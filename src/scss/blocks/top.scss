@@ -1,0 +1,23 @@
+.top {
+  position: relative;
+  padding: 1px 0;
+  background: url("../img/bg-banner.jpg") no-repeat top center;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    background: linear-gradient(143deg, rgb(0 184 212) 0%, rgb(29 233 182) 100%);
+    opacity: 0.9;
+  }
+}
+
+.top__wrap {
+  position: relative;
+  z-index: 1;
+}
