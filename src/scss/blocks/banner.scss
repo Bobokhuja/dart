@@ -1,0 +1,70 @@
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 160px 0;
+}
+
+.banner__left,
+.banner__right {
+  flex-basis: 600px;
+  margin: 20px 0;
+
+  @media (max-width: 1247px) {
+    flex-basis: 700px;
+  }
+}
+
+.banner__right {
+  @media (max-width: 1247px) {
+    margin: 0 auto;
+  }
+}
+
+.banner__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 65px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.banner__text {
+  font-size: 18px;
+  line-height: 35px;
+  color: $white;
+}
+
+.banner__button {
+  @include button($width: 150px, $height: auto, $bg: $blue, $fz: 15px, $lh: 20px, $border: none, $br: 4px, $color: $white) {
+    display: inline-block;
+    padding: 18px 0;
+    margin: 5px 0;
+    margin-right: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all, 0.3s;
+  }
+
+  &:hover {
+    color: $blue;
+    background-color: $white;
+  }
+
+  &--light {
+    @include button($width: 150px, $height: auto, $bg: $white, $fz: 15px, $lh: 20px, $border: none, $br: 4px, $color: $blue) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background: darken($white, 15%);
+    }
+  }
+}
+
+.banner__iframe {
+  @include adaptive-video;
+}
