@@ -81,6 +81,7 @@
 }
 
 @mixin button($width: auto, $height: auto, $bg, $fz, $lh, $border, $br, $color) {
+  box-sizing: border-box;
   display: inline-block;
   width: $width;
   height: $height;
@@ -88,8 +89,11 @@
   line-height: $lh;
   color: $color;
   text-align: center;
+  text-decoration: none;
   background: $bg;
   border: $border;
   border-radius: $br;
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 15%);
+  transition: all, 0.3s;
   @content;
 }

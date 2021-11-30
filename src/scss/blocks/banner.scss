@@ -30,12 +30,22 @@
   line-height: 65px;
   color: $white;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .banner__text {
   font-size: 18px;
   line-height: 35px;
   color: $white;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .banner__button {
