@@ -1,0 +1,84 @@
+.counts__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.counts__item {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 30px 0;
+
+  p {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 25px;
+    color: $white;
+  }
+
+  span {
+    display: block;
+  }
+
+  &--bussiness {
+    background: $blue1;
+
+    svg {
+      width: 26px;
+      height: 24px;
+      fill: $blue1;
+    }
+  }
+
+  &--downloads {
+    background: $blue2;
+
+    svg {
+      width: 18px;
+      height: 22px;
+      fill: $blue2;
+    }
+  }
+
+  &--free-installs {
+    background: $purple;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $purple;
+    }
+  }
+
+  &--pro-users {
+    background: $purpleLight;
+
+    svg {
+      width: 18px;
+      height: 22px;
+      fill: $purpleLight;
+    }
+  }
+}
+
+.counts__img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-right: 24px;
+  background: $white;
+  border-radius: 50%;
+}
+
+.counts__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

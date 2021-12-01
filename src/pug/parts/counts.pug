@@ -1,19 +1,31 @@
 section.counts
   h2.visually-hidden Числы
   ul.counts__list
-    li.counts__item
+    li.counts__item.counts__item--bussiness
+      .counts__img
+          svg(aria-hidden="true").counts__svg
+            use(xlink:href="img/symbol/sprite.svg#bussiness")
       p
         span.counts__count 12000+
         span.counts__subject Business
-    li.counts__item
+    li.counts__item.counts__item--downloads
+      .counts__img
+          svg(aria-hidden="true").counts__svg
+            use(xlink:href="img/symbol/sprite.svg#download")
       p
         span.counts__count 60000+
         span.counts__subject Downloads
-    li.counts__item
+    li.counts__item.counts__item--free-installs
+      .counts__img
+          svg(aria-hidden="true").counts__svg
+            use(xlink:href="img/symbol/sprite.svg#user")
       p
         span.counts__count 30000+
         span.counts__subject Free Installs
-    li.counts__item
+    li.counts__item.counts__item--pro-users
+      .counts__img
+            svg(aria-hidden="true").counts__svg
+              use(xlink:href="img/symbol/sprite.svg#download")
       p
         span.counts__count 40000+
         span.counts__subject Pro Users
