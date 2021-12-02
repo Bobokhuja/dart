@@ -1,0 +1,146 @@
+.services {
+  max-width: 800px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.services__title {
+  margin: 15px 0;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 52px;
+  color: $blue;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.services__text {
+  max-width: 560px;
+  margin: 20px auto;
+  font-size: 15px;
+  line-height: 25px;
+  color: $blueGray;
+  text-align: center;
+}
+
+.services__block {
+  margin: 40px 0;
+}
+
+.services__item {
+  box-sizing: border-box;
+  padding: 13px 23px;
+  margin-bottom: 20px;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 13%);
+
+  &--active {
+    .services__content {
+      display: block;
+    }
+  }
+}
+
+.services__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services__name {
+  position: relative;
+  padding-left: 43px;
+  margin: 0;
+  background-repeat: no-repeat;
+
+  &--statistic {
+    &::before {
+      width: 18px;
+      height: 11px;
+      background-image: url("../img/sprite.png");
+      background-position: 0 0;
+    }
+  }
+
+  &--inbox {
+    &::before {
+      width: 18px;
+      height: 14px;
+      background-image: url("../img/sprite.png");
+      background-position: -18px 0;
+    }
+  }
+
+  &--team {
+    &::before {
+      width: 20px;
+      height: 12px;
+      background-image: url("../img/sprite.png");
+      background-position: -36px 0;
+    }
+  }
+
+  &--settings {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/sprite.png");
+      background-position: -56px 0;
+    }
+  }
+
+  &--feed {
+    &::before {
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/sprite.png");
+      background-position: -74px 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+}
+
+.services__button {
+  width: 0;
+  height: 0;
+  padding: 0;
+  background: none;
+  border: 6px solid transparent;
+  border-top: 6px solid $blue;
+}
+
+.services__content {
+  display: none;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  p {
+    color: $blue;
+    letter-spacing: 0.3px;
+  }
+}
+
+.services__img {
+  margin: 0;
+  margin-right: 24px;
+
+  @media (min-width: 540px) {
+    float: left;
+  }
+}
