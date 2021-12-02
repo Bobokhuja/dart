@@ -8,12 +8,20 @@
 
 .counts__item {
   display: flex;
-  flex-grow: 1;
+  flex-basis: 25%;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   min-width: 220px;
   padding: 30px 0;
+
+  @media (max-width: 1024px) {
+    flex-basis: 50%;
+  }
+
+  @media (max-width: 568px) {
+    flex-basis: 100%;
+  }
 
   p {
     font-size: 20px;
