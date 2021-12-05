@@ -1,7 +1,9 @@
 header.header
   nav.header__navigation
     a(href="#").header__logo
-      img(src="img/logo.png", alt="Логотип Dart", width="180", height="30")
+      picture
+        source(srcset="img/logo.webp", type="image/webp", width="180", height="30")
+        img(src="img/logo.png", alt="Логотип Dart", width="180", height="30")
     ul.header__menu.menu
       li.menu__item
         a(href="#").menu__link Home

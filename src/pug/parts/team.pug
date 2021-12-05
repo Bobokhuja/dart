@@ -6,13 +6,19 @@ section.team.wrap
     .team__tabs
       .team__tab
         a(href="#").team__tab-link
-          img(src="img/avatar1.jpg", alt="Аватар Sophie Turner", width="100", height="100")
+          picture
+            source(srcset="img/avatar1.webp", type="image/webp", width="100", height="100")
+            img(src="img/avatar1.jpg", alt="Аватар Sophie Turner", width="100", height="100")
       .team__tab.team__tab--active
         a(href="#").team__tab-link
-          img(src="img/avatar2.jpg", alt="Аватар Sophie Turner", width="100", height="100")
+          picture
+            source(srcset="img/avatar2.webp", type="image/webp", width="100", height="100")
+            img(src="img/avatar2.jpg", alt="Аватар Sophie Turner", width="100", height="100")
       .team__tab
         a(href="#").team__tab-link
-          img(src="img/avatar3.jpg", alt="Аватар Sophie Turner", width="100", height="100")
+          picture
+            source(srcset="img/avatar3.webp", type="image/webp", width="100", height="100")
+            img(src="img/avatar3.jpg", alt="Аватар Sophie Turner", width="100", height="100")
     .team__content
       .team__item
         h3.team__name Sophie Turner

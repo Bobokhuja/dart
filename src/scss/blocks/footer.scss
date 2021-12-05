@@ -28,6 +28,7 @@
 }
 
 .footer__menu {
+  justify-content: end;
   margin-bottom: 45px;
 
   @media (max-width: 823px) {
@@ -45,8 +46,13 @@
   }
 
   &--left {
+    justify-content: start;
     margin-bottom: 0;
     color: $white;
+
+    @media (max-width: 823px) {
+      justify-content: center;
+    }
 
     .menu__item {
       position: relative;
