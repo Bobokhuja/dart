@@ -4,23 +4,23 @@ section.contacts
     p.contacts__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 
     form(action="#", method="post").contacts__form
-      p.contacts__group
+      p.contacts__group.contacts__input
         label(for="firstname")
           span.visually-hidden Ваше имя
         input(type="text", name="firstname", placeholder="First Name", id="firstname")
-      p.contacts__group
+      p.contacts__group.contacts__input
         label(for="lastname")
           span.visually-hidden Ваша фамилия
         input(type="text", name="lastname", placeholder="Last Name", id="lastname")
-      p.contacts__group
+      p.contacts__group.contacts__input
         label(for="email")
           span.visually-hidden Ваш E-mail
         input(type="email", name="email", placeholder="Email", id="email")
-      p.contacts__group
+      p.contacts__group.contacts__input
         label(for="phone")
           span.visually-hidden Ваш телефон
         input(type="tel", name="phone", placeholder="Phone", id="phone")
-      p.contacts__group
+      p.contacts__group.contacts__message
         label(for="message")
           span.visually-hidden Ваше сообщение
         textarea(name="message", placeholder="Message", id="message")
