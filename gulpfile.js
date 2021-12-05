@@ -60,7 +60,7 @@ const gulp = require('gulp'),
       cheerio = require('gulp-cheerio'),
       postcss = require('gulp-postcss'),
       autoprefixer = require('autoprefixer'),
-      cssnano = require('cssnano'),
+      cssnano = require('postcss-csso'),
       pug = require('gulp-pug'),
       stylelint = require('stylelint'),
       reporter = require('postcss-reporter'),
@@ -110,13 +110,13 @@ function scssProd() {
           .pipe(gulp.dest(path.dist.css))
           .pipe(gulp.src(path.src.sass))
           .pipe(sass({
-            outputStyle: 'expanded'
+            outputStyle: 'compressed'
           }).on('error', sass.logError))
-          .pipe(postcss([cssnano()]))
           .pipe(mediaQueries())
           .pipe(rename({
             extname: '.min.css'
           }))
+          .pipe(postcss([cssnano()]))
           .pipe(gulp.dest(path.dist.css))
           .pipe(browserSync.stream());
 }
