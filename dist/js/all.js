@@ -166,7 +166,10 @@ var LiteYTEmbed = /*#__PURE__*/function (_HTMLElement) {
 }( /*#__PURE__*/_wrapNativeSuper(HTMLElement)); // Register custom element
 
 
-customElements.define('lite-youtube', LiteYTEmbed);
+customElements.get('lite-youtube') || customElements.define('lite-youtube', LiteYTEmbed);
+/* if (!customElements.get('the-element')) {
+customElements.define('the-element', HTMLTheElement);
+} */
 "use strict";
 
 /*!
