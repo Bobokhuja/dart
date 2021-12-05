@@ -22,7 +22,7 @@
   font-size: 25px;
   font-weight: 600;
   line-height: 28px;
-  color: $blueGray;
+  color: #7d8990;
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -35,7 +35,7 @@
   margin: 20px auto;
   font-size: 15px;
   line-height: 25px;
-  color: $blueGray;
+  color: #5e6b72;
 }
 
 .features__list {
@@ -76,11 +76,11 @@
 .features__description {
   font-size: 15px;
   line-height: 20px;
-  color: $blueGray2;
+  color: #5b6e78;
 }
 
 .features__button {
-  @include button($width: auto, $height: 55px, $bg: $greenLight, $fz: 15px, $lh: 15px, $border: none, $br: 4px, $color: $white) {
+  @include button($width: auto, $height: 55px, $bg: $greenLight, $fz: 15px, $lh: 15px, $border: none, $br: 4px, $color: #575757) {
     padding: 20px 25px;
     font-weight: 600;
     text-transform: uppercase;

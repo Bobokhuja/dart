@@ -732,7 +732,7 @@ body {
   font-size: 25px;
   font-weight: 600;
   line-height: 28px;
-  color: #b0bec5;
+  color: #7d8990;
 }
 
 .features__text {
@@ -740,7 +740,7 @@ body {
   margin: 20px auto;
   font-size: 15px;
   line-height: 25px;
-  color: #b0bec5;
+  color: #5e6b72;
 }
 
 .features__list {
@@ -778,7 +778,7 @@ body {
 .features__description {
   font-size: 15px;
   line-height: 20px;
-  color: #78909c;
+  color: #5b6e78;
 }
 
 .features__button {
@@ -789,7 +789,7 @@ body {
   height: 55px;
   font-size: 15px;
   line-height: 15px;
-  color: #fff;
+  color: #575757;
   text-align: center;
   text-decoration: none;
   background: #1de9b6;
@@ -841,7 +841,7 @@ body {
   font-size: 20px;
   font-weight: 800;
   line-height: 25px;
-  color: #fff;
+  color: #434343;
 }
 
 .counts__item span {
@@ -925,7 +925,7 @@ body {
   margin: 20px auto;
   font-size: 15px;
   line-height: 25px;
-  color: #b0bec5;
+  color: #6e777b;
   text-align: center;
 }
 
@@ -1173,7 +1173,7 @@ body {
   font-size: 15px;
   font-style: italic;
   line-height: 25px;
-  color: #78909c;
+  color: #596b74;
 }
 
 .team {
@@ -1195,7 +1195,7 @@ body {
   margin: 20px auto;
   font-size: 15px;
   line-height: 25px;
-  color: #b0bec5;
+  color: #60686c;
 }
 
 .team__block {
@@ -1277,7 +1277,7 @@ body {
 .team__text {
   font-size: 15px;
   line-height: 25px;
-  color: #90a4ae;
+  color: #5c6a72;
 }
 
 .team__social {
@@ -1377,7 +1377,7 @@ body {
   height: 55px;
   font-size: 15px;
   line-height: 15px;
-  color: #fff;
+  color: #494949;
   text-align: center;
   text-decoration: none;
   background: #1de9b6;
