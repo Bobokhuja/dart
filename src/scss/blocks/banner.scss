@@ -77,4 +77,6 @@
 
 .banner__iframe {
   @include adaptive-video;
+
+  background-color: #ddd;
 }
