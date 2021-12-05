@@ -10,7 +10,7 @@ const path = {
     html: sourceFolder + '/*.html',
     sass: sourceFolder + '/scss/style.scss',
     css: sourceFolder + '/css/**/*.css',
-    js: sourceFolder + '/js/**/*.js',
+    js: sourceFolder + '/js/index.js',
     img: sourceFolder + '/img/**/*.{jpg,png,webp,svg,ico,gif}',
     icons: sourceFolder + '/img/icons/**/*.svg',
     fonts: sourceFolder + '/fonts/**/*.{woff,woff2}',
@@ -40,7 +40,7 @@ const jsConcat = [
   sourceFolder + '/js/lite-yt-embed.js',
   sourceFolder + '/js/jquery.js',
   sourceFolder + '/js/svgxuse.min.js',
-  sourceFolder + '/js/**/*.js'
+  sourceFolder + '/js/index.js'
 ];
 
 // dependencies
@@ -66,8 +66,8 @@ const gulp = require('gulp'),
       reporter = require('postcss-reporter'),
       mediaQueries = require('gulp-group-css-media-queries'),
       bemLinter = require('postcss-bem-linter'),
-      htmlhint = require('gulp-htmlhint'),
-      concat = require('gulp-concat')
+      webpack = require('webpack'),
+      gulpWebpack = require('webpack-stream');
 
 // Tasks
 
@@ -78,7 +78,6 @@ function pugBuild() {
         pretty: true
       })
     )
-    .pipe(htmlhint())
     .pipe(gulp.dest(path.dist.html))
     .pipe(browserSync.stream())
 }
@@ -143,23 +142,14 @@ function css() {
 
 function js() {
   return gulp.src(path.src.js)
+          .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
           .pipe(gulp.dest(path.dist.js))
           .pipe(browserSync.stream());
 }
 
 function jsProd() {
-  return gulp.src(jsConcat, {allowEmpty: true})
-          .pipe(babel({
-            presets: ["@babel/preset-env"]
-          }))
-          .pipe(concat('all.js'))
-          .pipe(gulp.dest(path.dist.js))
-          .pipe(gulp.src(path.src.js))
-          .pipe(babel({
-            presets: ["@babel/preset-env"]
-          }))
-          .pipe(concat('all.min.js'))
-          .pipe(uglify())
+  return gulp.src(path.src.js)
+          .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
           .pipe(gulp.dest(path.dist.js))
           .pipe(browserSync.stream());
 }
