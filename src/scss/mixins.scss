@@ -22,7 +22,8 @@
   padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
   overflow: hidden;
 
-  iframe {
+  iframe,
+  lite-youtube {
     position: absolute;
     top: 0;
     left: 0;

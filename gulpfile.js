@@ -1,4 +1,4 @@
-const mode = 'development';
+const mode = 'production';
 
 // modules
 
@@ -37,6 +37,7 @@ const path = {
 };
 
 const jsConcat = [
+  sourceFolder + '/js/lite-yt-embed.js',
   sourceFolder + '/js/jquery.js',
   sourceFolder + '/js/svgxuse.min.js',
   sourceFolder + '/js/**/*.js'
@@ -114,7 +115,7 @@ function scssProd() {
           .pipe(postcss(processor))
           .pipe(mediaQueries())
           .pipe(rename({
-            extname: 'style.min.css'
+            extname: '.min.css'
           }))
           .pipe(gulp.dest(path.dist.css))
           .pipe(browserSync.stream());
