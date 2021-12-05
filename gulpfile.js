@@ -112,7 +112,7 @@ function scssProd() {
           .pipe(sass({
             outputStyle: 'expanded'
           }).on('error', sass.logError))
-          .pipe(postcss(processor))
+          .pipe(postcss([cssnano()]))
           .pipe(mediaQueries())
           .pipe(rename({
             extname: '.min.css'
